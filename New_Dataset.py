@@ -65,9 +65,9 @@ class New_Dataset(object):
                     continue
                 photoid.append(a)
                 featureData.append(b)
-        with open('Output/photoid.csv','w') as f:
-            f.write(str(photoid))
-            f.close()
+        #with open('Output/photoid.csv','w') as f:
+            #f.write(str(photoid))
+            #f.close()
         photoid=pd.factorize(pd.Series(photoid))[1]
         featureData=np.array(featureData,dtype='float32')
         return photoid, featureData
